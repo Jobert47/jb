@@ -1,71 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <base target="_top">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cipher Message Board</title>
+
   <link rel="stylesheet" href="jb.css">
 </head>
 
 <body>
 
-<div class="container">
+  <div class="container">
 
-  <div class="header">
-    <h1>🔐 Cipher Message Board</h1>
-    <p>Encrypt, share, and decrypt secret messages</p>
-  </div>
-
-  <!-- ENCRYPTION SECTION -->
-  <div class="card">
-
-    <h2>🔒 Create Secret Message</h2>
-
-    <label for="message">Message</label>
-
-    <textarea
-      id="message"
-      placeholder="Enter your message..."
-    ></textarea>
-
-    <label for="key">Secret Key</label>
-
-    <input
-      type="text"
-      id="key"
-      placeholder="Enter your secret key..."
-    >
-
-    <button onclick="encryptAndPost()">
-      🔐 Encrypt & Post
-    </button>
-
-    <button
-      class="clear-btn"
-      onclick="clearForm()"
-    >
-      Clear
-    </button>
-
-    <div id="postResult" class="result"></div>
-
-  </div>
+    <!-- HEADER -->
+    <div class="header">
+      <h1>🔐 Cipher Message Board</h1>
+      <p>Encrypt, share, and decrypt secret messages</p>
+    </div>
 
 
-  <!-- PUBLIC FEED -->
-  <div class="card">
+    <!-- ENCRYPTION SECTION -->
+    <div class="card">
 
-    <h2>🌐 Public Message Feed</h2>
+      <h2>🔒 Create Secret Message</h2>
 
-    <div id="feed">
-      <p class="loading">
-        Loading messages...
-      </p>
+      <label for="message">
+        Message
+      </label>
+
+      <textarea
+        id="message"
+        placeholder="Enter your message..."
+      ></textarea>
+
+
+      <label for="key">
+        Secret Key
+      </label>
+
+      <input
+        type="text"
+        id="key"
+        placeholder="Enter your secret key..."
+      >
+
+
+      <div class="button-group">
+
+        <button
+          type="button"
+          onclick="encryptAndPost()"
+        >
+          🔐 Encrypt & Post
+        </button>
+
+        <button
+          type="button"
+          class="clear-btn"
+          onclick="clearForm()"
+        >
+          Clear
+        </button>
+
+      </div>
+
+
+      <div
+        id="postResult"
+        class="result"
+      ></div>
+
+    </div>
+
+
+    <!-- PUBLIC FEED -->
+    <div class="card">
+
+      <h2>🌐 Public Message Feed</h2>
+
+      <div id="feed">
+
+        <p class="loading">
+          Loading messages...
+        </p>
+
+      </div>
+
     </div>
 
   </div>
 
-</div>
 
- <script src="jb.js" defer></script>
+  <!-- JAVASCRIPT -->
+  <script
+    src="jb.js"
+    defer>
+  </script>
 
 </body>
+
 </html>
